@@ -4,6 +4,11 @@
 
 [https://hello-nav.github.io](https://hello-nav.github.io)
 
+## TODO
+
+- [ ] open in new tab
+- [ ] websearch
+
 ## 🗺 Features
 
 - 300+ popular apps

@@ -13,6 +13,8 @@ const AppsContext = createContext({
   toggleVisible: (app: AppItem) => {},
   filterKey: '' as string,
   setFilterKey: (str: string) => {},
+  searchKey: '' as string,
+  setSearchKey: (str: string) => {},
 })
 
 const AppsProvider = ({ children }: any) => {
@@ -140,6 +142,7 @@ const AppsProvider = ({ children }: any) => {
   )
 
   const [filterKey, setFilterKey] = useState<string>('')
+  const [searchKey, setSearchKey] = useState<string>('')
 
   const value = {
     favoriteApps,
@@ -154,6 +157,8 @@ const AppsProvider = ({ children }: any) => {
     toggleVisible,
     filterKey,
     setFilterKey,
+    searchKey,
+    setSearchKey,
   }
 
   return <AppsContext.Provider value={value}>{children}</AppsContext.Provider>

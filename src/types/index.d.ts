@@ -26,10 +26,13 @@ declare interface LibraryMap {
   category: CateItem[]
 }
 
-declare interface FilterProps {
-  onInput(e: React.FormEvent): void
-  onClear(): void
+declare interface ToolBarProps {
+  filterInput(e: React.FormEvent): void
+  searchInput(e: React.FormEvent): void
+  onFliterClear(): void
+  onSearchClear(): void
   filterKey: string
+  searchKey: string
   toggleType: any
   toggleSetting: any
   type: string

@@ -6,8 +6,9 @@
 
 ## TODO
 
-- [ ] open in new tab
-- [ ] websearch
+- [x] open in new tab
+- [x] websearch
+- [ ] Optimize the web search function
 
 ## 🗺 Features
 

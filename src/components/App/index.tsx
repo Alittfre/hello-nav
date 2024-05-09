@@ -41,7 +41,7 @@ function App() {
   }
 
   const [isSettingMode, setIsSettingMode] = useState(false)
-  const { favoriteApps, filterKey, setFilterKey } = useContext(AppsContext)
+  const { favoriteApps, filterKey, setFilterKey, searchKey, setSearchKey } = useContext(AppsContext)
   const newFilterKey = filterKey.trim().toLowerCase().replace(IGNORE_KEYWORD_REG, '')
   const libraries: (AppItem | CateItem)[] =
     type === 'category'
@@ -74,12 +74,15 @@ function App() {
     <div className="body">
       <ActionBar
         filterKey={filterKey}
-        onInput={(e: React.ChangeEvent<HTMLInputElement>) => setFilterKey(e.target.value)}
-        onClear={() => setFilterKey('')}
+        filterInput={(e: React.ChangeEvent<HTMLInputElement>) => setFilterKey(e.target.value)}
+        onFliterClear={() => setFilterKey('')}
         type={type}
         isSettingMode={isSettingMode}
         toggleType={toggleType}
         toggleSetting={() => setIsSettingMode(!isSettingMode)}
+        searchKey={searchKey}
+        searchInput={(e: React.ChangeEvent<HTMLInputElement>) => setSearchKey(e.target.value)}
+        onSearchClear={() => setSearchKey('')}
       />
       <div className="main">
         <ContainWithNotFind

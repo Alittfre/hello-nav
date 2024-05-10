@@ -2,7 +2,7 @@
 
 ## A pure navigation for developers
 
-[https://hello-nav.github.io](https://hello-nav.github.io)
+[https://hello-nav-roan.vercel.app/](https://hello-nav-roan.vercel.app/)
 
 ## TODO
 
